@@ -1,0 +1,26 @@
+Top 5 issues found:
+
+1. Can modify existing email
+The email can be modified against the requirements for existing user
+
+2. GET Request time > 500ms when db > 50000 entries
+The database size increase will result in slower responses (depending on machine resources)
+
+3. Concurrent POST requests will result: one request 201 and the rest 500 error
+Concurrent request will compete for same ID
+
+4. Empty user can be created, no regex limitations on inputs on UI/API
+Duplicated/empty fields users are not enforced on Frontend / Backend
+
+5. 404 PUT/DELETE not handled in UI
+Put/Delete on inexistent resources returns a 404 in Backend, but not handled by UI
+
+
+Other issues:
+Can not easily navigate to last records when > 100 pages
+Filtering desc will include ids from a different page, e.g. Filtering when at 8501-8600 of 999736 records descending will display last page items, starting from 999738
+Hiding all columns can't be reverted unless page is reloaded
+Loading huge ammounts of data displays 'No rows' instead of indicating pending api request state, does not update async
+Updating user when displayed users are on multiple pages will remove the user from the list, available on reload
+Switching tabs will leave the pending requests not canceled, executing synchronously, no caching of GET response
+Sorting is blocking the execution thread, UI non responsive for 2000ms
