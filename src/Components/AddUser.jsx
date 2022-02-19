@@ -35,22 +35,22 @@ const AddUser = () => {
             <FormGroup>
                 <FormControl required>
                     <InputLabel>Name</InputLabel>
-                    <Input onChange={(e) => onValueChange(e)} name="name" value={name} required/>
+                    <Input qa-data="name" onChange={(e) => onValueChange(e)} name="name" value={name} required/>
                 </FormControl>
                 <FormControl required>
                     <InputLabel>User Name</InputLabel>
-                    <Input onChange={(e) => onValueChange(e)} name="username" value={username} required/>
+                    <Input qa-data="userName" onChange={(e) => onValueChange(e)} name="username" value={username} required/>
                 </FormControl>
                 <FormControl required>
                     <InputLabel>Email address</InputLabel>
-                    <Input onChange={(e) => onValueChange(e)} name="email" value={email} required/>
+                    <Input qa-data="email" onChange={(e) => onValueChange(e)} name="email" value={email} required/>
                 </FormControl>
                 <FormControl>
                     <InputLabel>Phone Number</InputLabel>
-                    <Input onChange={(e) => onValueChange(e)} name="phone" value={phone} />
+                    <Input qa-data="phoneNumber" onChange={(e) => onValueChange(e)} name="phone" value={phone} />
                 </FormControl>
                 <Box my={3}>
-                    <Button variant="contained" onClick={() => addUserDetails() } color="primary" align="center">Add User</Button>
+                    <Button qa-data="submit" variant="contained" onClick={() => addUserDetails() } color="primary" align="center">Add User</Button>
                     <Button onClick={()=> history.push("/all")} variant="contained" color="secondary" align="center" style={{margin: '0px 20px'}}>Cancel</Button>
                 </Box>
             </FormGroup>

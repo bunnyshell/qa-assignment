@@ -70,8 +70,8 @@ const AllUsers = () => {
         
                 return (
                     <>
-                        <Button variant="contained" color="primary" style={{margin: '0px 20px'}} onClick={onEdit}>Edit</Button>
-                        <Button variant="contained" color="secondary" style={{margin: '0px 20px'}} onClick={onRemove}>Remove</Button>
+                        <Button qa-data="EditButton" variant="contained" color="primary" style={{margin: '0px 20px'}} onClick={onEdit}>Edit</Button>
+                        <Button qa-data="RemoveButton" variant="contained" color="secondary" style={{margin: '0px 20px'}} onClick={onRemove}>Remove</Button>
                     </>
                 );
             } 
@@ -81,7 +81,7 @@ const AllUsers = () => {
     return (
         <>
         <div style={{ height: 700, width: '100%' }}>
-        <DataGrid
+        <DataGrid qa-data="DataGrid"
              rows={user}
              columns={columns}
              initialState={{
