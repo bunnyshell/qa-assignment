@@ -19,9 +19,9 @@ const Navbar = () => {
     return (
         <AppBar className={classes.header} position="static">
             <Toolbar >
-                <NavLink to="/" className={classes.spacing}> Home</NavLink>
-                <NavLink to="/all" className={classes.spacing}> Users</NavLink>
-                <NavLink to="/add" className={classes.spacing}> Add Users</NavLink>
+                <NavLink to="/" className={classes.spacing} qa-data="HomeLink"> Home</NavLink>
+                <NavLink to="/all" className={classes.spacing} qa-data="UsersLink"> Users</NavLink>
+                <NavLink to="/add" className={classes.spacing} qa-data="AddLink"> Add Users</NavLink>
             </Toolbar>
         </AppBar>
     )
